@@ -1,3 +1,5 @@
+import array from '../dist/array.js'
+
 !(function (t, e) {
     var o, n, p, r
     e.__SV ||
@@ -13,7 +15,7 @@
             }
             ;((p = t.createElement('script')).type = 'text/javascript'),
                 (p.async = !0),
-                (p.src = '../dist/array.js'),
+                (p.src = array),
                 (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
             var u = e
             for (

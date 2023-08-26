@@ -8,6 +8,7 @@
     "scripts": {
         "start": "yarn build-rollup -w",
         "build": "yarn build-rollup",
+        "final": "esbuild --bundle --minify output/main.js --outdir=final",
         "build-rollup": "rm -rf lib && tsc -b && rollup -c",
         "lint": "eslint src",
         "prettier": "prettier --write src/ functional_tests/",
@@ -45,6 +46,7 @@
         "babel-eslint": "10.1.0",
         "babel-jest": "^26.6.3",
         "cypress": "10.3.1",
+        "esbuild": "^0.19.2",
         "eslint": "8.20.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-compat": "^4.1.4",
