@@ -40,4 +40,7 @@ import array from '../array/array.js'
         }),
         (e.__SV = 1))
 })(document, window.posthog || [])
-posthog.init('phc_Q72CwBKCQY7SQnoPzrLkDl0mb6UB6lIOrL8nmeJxwZk', { api_host: 'https://app.posthog.com' })
+window.posthog.init('phc_Q72CwBKCQY7SQnoPzrLkDl0mb6UB6lIOrL8nmeJxwZk', {
+    api_host: 'https://app.posthog.com',
+    autocapture: false,
+})
