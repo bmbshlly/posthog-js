@@ -1,5 +1,3 @@
-import array from '../dist/array.js'
-
 !(function (t, e) {
     var o, n, p, r
     e.__SV ||
@@ -15,7 +13,7 @@ import array from '../dist/array.js'
             }
             ;((p = t.createElement('script')).type = 'text/javascript'),
                 (p.async = !0),
-                (p.src = array),
+                (p.src = 'https://app.posthog.com/static/array.js'),
                 (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
             var u = e
             for (
@@ -41,6 +39,4 @@ import array from '../dist/array.js'
         }),
         (e.__SV = 1))
 })(document, window.posthog || [])
-posthog.init('phc_Q72CwBKCQY7SQnoPzrLkDl0mb6UB6lIOrL8nmeJxwZk', {
-    api_host: 'https://app.posthog.com',
-})
+posthog.init('phc_Q72CwBKCQY7SQnoPzrLkDl0mb6UB6lIOrL8nmeJxwZk', { api_host: 'https://app.posthog.com' })
