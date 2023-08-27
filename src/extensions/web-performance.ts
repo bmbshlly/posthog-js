@@ -108,10 +108,10 @@ export class WebPerformanceObserver {
             return
         }
 
-        if (isLocalhost() && !this._forceAllowLocalhost) {
-            logger.log('PostHog Peformance observer not started because we are on localhost.')
-            return
-        }
+        // if (isLocalhost() && !this._forceAllowLocalhost) {
+        //     logger.log('PostHog Peformance observer not started because we are on localhost.')
+        //     return
+        // }
 
         try {
             // compat checked above with early return
