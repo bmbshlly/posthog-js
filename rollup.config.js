@@ -2,8 +2,8 @@ import babel from '@rollup/plugin-babel'
 import json from '@rollup/plugin-json'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
-import dts from 'rollup-plugin-dts'
-import pkg from './package.json'
+// import dts from 'rollup-plugin-dts'
+// import pkg from './package.json'
 import terser from '@rollup/plugin-terser'
 import { visualizer } from 'rollup-plugin-visualizer'
 
@@ -22,35 +22,35 @@ const plugins = [
 ]
 
 export default [
-    {
-        input: 'src/loader-recorder.ts',
-        output: [
-            {
-                file: 'dist/recorder.js',
-                sourcemap: true,
-                format: 'iife',
-                name: 'posthog',
-            },
-        ],
-        plugins: [...plugins],
-    },
-    {
-        input: 'src/loader-recorder-v2.ts',
-        output: [
-            {
-                file: 'dist/recorder-v2.js',
-                sourcemap: true,
-                format: 'iife',
-                name: 'posthog',
-            },
-        ],
-        plugins: [...plugins],
-    },
+    // {
+    //     input: 'src/loader-recorder.ts',
+    //     output: [
+    //         {
+    //             file: 'dist/recorder.js',
+    //             sourcemap: true,
+    //             format: 'iife',
+    //             name: 'posthog',
+    //         },
+    //     ],
+    //     plugins: [...plugins],
+    // },
+    // {
+    //     input: 'src/loader-recorder-v2.ts',
+    //     output: [
+    //         {
+    //             file: 'dist/recorder-v2.js',
+    //             sourcemap: true,
+    //             format: 'iife',
+    //             name: 'posthog',
+    //         },
+    //     ],
+    //     plugins: [...plugins],
+    // },
     {
         input: 'src/loader-globals.ts',
         output: [
             {
-                file: 'dist/array.js',
+                file: 'output/array.js',
                 sourcemap: true,
                 format: 'iife',
                 name: 'posthog',
@@ -58,42 +58,42 @@ export default [
         ],
         plugins: [...plugins],
     },
-    {
-        input: 'src/loader-globals-full.ts',
-        output: [
-            {
-                file: 'dist/array.full.js',
-                sourcemap: true,
-                format: 'iife',
-                name: 'posthog',
-            },
-        ],
-        plugins: [...plugins],
-    },
-    {
-        input: 'src/loader-module.ts',
-        output: [
-            {
-                file: pkg.main,
-                format: 'cjs',
-                sourcemap: true,
-                exports: 'auto',
-            },
-            {
-                file: pkg.module,
-                format: 'es',
-                sourcemap: true,
-            },
-        ],
-        plugins: [...plugins],
-    },
-    {
-        input: './lib/src/loader-module.d.ts',
-        output: [{ file: pkg.types, format: 'es' }],
-        plugins: [
-            dts({
-                respectExternal: true,
-            }),
-        ],
-    },
+    // {
+    //     input: 'src/loader-globals-full.ts',
+    //     output: [
+    //         {
+    //             file: 'dist/array.full.js',
+    //             sourcemap: true,
+    //             format: 'iife',
+    //             name: 'posthog',
+    //         },
+    //     ],
+    //     plugins: [...plugins],
+    // },
+    // {
+    //     input: 'src/loader-module.ts',
+    //     output: [
+    //         {
+    //             file: pkg.main,
+    //             format: 'cjs',
+    //             sourcemap: true,
+    //             exports: 'auto',
+    //         },
+    //         {
+    //             file: pkg.module,
+    //             format: 'es',
+    //             sourcemap: true,
+    //         },
+    //     ],
+    //     plugins: [...plugins],
+    // },
+    // {
+    //     input: './lib/src/loader-module.d.ts',
+    //     output: [{ file: pkg.types, format: 'es' }],
+    //     plugins: [
+    //         dts({
+    //             respectExternal: true,
+    //         }),
+    //     ],
+    // },
 ]
