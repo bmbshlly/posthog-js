@@ -82,7 +82,7 @@ export class WebPerformanceObserver {
     observer: PerformanceObserver | undefined
 
     // Util to help developers working on this feature manually override
-    _forceAllowLocalhost = false
+    _forceAllowLocalhost = true
 
     constructor(instance: PostHog) {
         this.instance = instance
