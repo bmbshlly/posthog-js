@@ -1,3 +1,15 @@
+## 1.78.1 - 2023-09-07
+
+- fix(flags): Re-enable reload only when request finishes (#791)
+
+## 1.78.0 - 2023-09-07
+
+- fix: Handle uninitialised helpers better (#767)
+
+## 1.77.3 - 2023-09-05
+
+- feat: test a better list of bots and allow users to configure the bot… (#788)
+
 ## 1.77.2 - 2023-08-25
 
 - fix(autocapture): element properties tracked up to 1k bytes (#783)
